@@ -1,0 +1,23 @@
+-- database: ./students.db
+
+SELECT * FROM students;
+    CREATE TABLE IF NOT EXISTS students (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        surname TEXT NOT NULL,
+        age INTEGER NOT NULL,
+        sex TEXT NOT NULL,
+        major TEXT NOT NULL,
+        number INTEGER NOT NULL
+    );
+
+
+SELECT * FROM students;
+
+ALTER TABLE students ADD COLUMN number INTEGER;
+
+INSERT INTO students (name, surname, age, sex, major, number) VALUES ("Ilyas", "Kyzaev", 21, "male", "software engineer", 500745700);
+
+UPDATE students SET number = 1234567890 WHERE id = 1;
+
+DELETE FROM students WHERE id = 1;
